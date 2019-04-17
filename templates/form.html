@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Info</title>
+  <!-- <link rel="stylesheet" type="text/css" href="style1.css">-->
+   <style>
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+form{
+  display: block; 
+  margin: 7% auto 5%;
+  border: 3px solid black;
+  background-position: center; 
+  background: lightgrey;
+  width: 500px;
+  font-family: calibri;
+  padding: 25px;
+}
+
+
+body{
+  font-family: calibri;
+  background-image: url({{ url_for('static', filename="Movie.jpg") }});
+  /*background-color: #cccccc;*/
+  /*background:transparent;*/
+  height:100vh;
+  background-size: cover;
+  background-position: center;  
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+
+  font-style: oblique;
+}
+label{
+  font-size: 20px;
+  font-family:Georgia;
+}
+input[type=text]{
+  background-color: white;
+  width: 400px;
+  border-radius: 10px;
+  max-height: 30px;
+  padding: 8px;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- <img src="../static/Movie.jpg"> -->
+
+<form action="/predict" method="POST">
+<div id="form">
+	<h1><center>Movie Reviews</center></h1>
+	
+		
+  		<label class="label" for="Reviews">Write movie reviews</label><br><br>
+  		<div id="text">
+		<input type="text" name="Reviews" id="Reviews"/><br><br>
+  </div>
+  <br><br>
+  <center><div id="button">
+  		<button class="button">Submit</button>
+  		<!--<button class="button">Clear</button>-->
+
+
+  </div></center>
+</div>
+</form> 
+</body>
+</html>
