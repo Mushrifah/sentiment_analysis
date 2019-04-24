@@ -2,7 +2,6 @@
 <html>
 <head>
    <title>Info</title>
-  <!-- <link rel="stylesheet" type="text/css" href="style1.css">-->
    <style>
 .button {
   padding: 15px 25px;
@@ -69,12 +68,14 @@ input[type=text]{
 </head>
 <body>
 
-<!-- <img src="../static/Movie.jpg"> -->
+
 
 <form action="/predict" method="POST">
 <div id="form">
 	<h1><center>Movie Reviews</center></h1>
-	
+		<label class="label" for="Reviews">Write the movie name</label><br><br>
+  			<div id="text">
+			<input type="text" name="Reviews" id="Reviews"/><br><br>
 		
   		<label class="label" for="Reviews">Write movie reviews</label><br><br>
   		<div id="text">
@@ -83,7 +84,7 @@ input[type=text]{
   <br><br>
   <center><div id="button">
   		<button class="button">Submit</button>
-  		<!--<button class="button">Clear</button>-->
+  		
 
 
   </div></center>
