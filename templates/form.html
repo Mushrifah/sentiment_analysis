@@ -35,6 +35,7 @@ form{
 }
 body{
   font-family: calibri;
+  margin-top: 40px;
   background-image: url({{ url_for('static', filename="Movie.jpg") }});
   /*background-color: #cccccc;*/
   /*background:transparent;*/
@@ -68,23 +69,23 @@ input[type=text]{
 <div id="form" class="card text-white bg-dark mb-3" style="width: 600px;">
   <div class="card-body">
     <h1><center>Movie Reviews</center></h1><br>
-    <label class="label" for="movie">Write the movie name</label><br>
+    <label class="label" for="movie" style="color: White;">Write the movie name</label><br>
     <div id="text">
       <input type="text" name="movie" id="movie"/><br><br>
-      <label class="label" for="Reviews">Write movie review</label><br>
+      <label class="label" for="Reviews" style="color: white;">Write movie review</label><br>
       <div id="text">
       <input type="text" name="Reviews" id="Reviews"/><br><br>
       </div>
       <br>
       <center><div id="button">
-        <button class="button" id="submit">Submit</button>
+        <button class="button" id="submit">Submit</button><br><br>
       <!--<button class="button">Clear</button>-->
         </div>
       </center>
     </div>
   </div>
-  <div class="card bg-light mb-3" style="max-width: 18rem;">
-    <p id='result' style="display: hidden;"></p>
+  <div class="card bg-light mb-3" style="max-width: 20rem;">
+    <p id='result' style="color: Black;"></p>
   </div>
 </center>
 
