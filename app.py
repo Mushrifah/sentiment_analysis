@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify, request
-from sklearn.externals import joblib
+import pickle
 import traceback
 import pandas as pd
 import numpy as np
@@ -50,12 +50,15 @@ if __name__ == '__main__':
         port = 12345 # If you don't provide any port the port will be set to 12345
 
 
+    #load the model
+    svm_pkl=open('svm_classifier.pkl','rb')
+    svm=pickle.load(svm_pkl)
 
+    #load the vectorizer model
+    vectorizer_pkl=open('vectorizer.pkl','rb')
+    vectorizer=pickle.load(vectorizer_pkl)
+    
 
-
-    svm = joblib.load("svm_classifier.pkl") # Load "model.pkl"
-    print ('Model loaded')
-    vectorizer=joblib.load("vectorizer.pkl")
     
     app.run(port=port, debug=False)
 

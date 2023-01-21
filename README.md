@@ -1,17 +1,19 @@
 # Sentiment Analysis on IMDB reviews dataset
 A flask app for predicting sentiment of movie reviews trained on imdb movie reviews dataset 
 
+
+
 # Steps to run the project
 
 1. Clone the repository
 
-2. Download the data and unzip it : Data can be downloaded at: http://ai.stanford.edu/~amaas/data/sentiment/ 
+2. Create a virtual conda environment with `conda create -n sentiment python=3.9` and activate the env with `conda activate sentiment`.
 
-3. Ater downloading the above zip file run the 'extractor.py' file to get all the data together in a single csv file
+3. Install the necessary packages with `pip insatll -r requirements.txt`
 
-4. Run the svm_model_for_imdb_reviews.ipynb file to save the model or use the present model files in the repo and skip this step. 
+4. Run python app.py to view the final webpage
+ 
 
-5. Finally run the 'app.py' file
 
 
 
