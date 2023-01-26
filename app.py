@@ -44,10 +44,8 @@ def predict():
 
 if __name__ == '__main__':
 
-    try:
-        port = int(sys.argv[1]) # This is for a command-line input
-    except:
-        port = 12345 # If you don't provide any port the port will be set to 12345
+  
+    port = 5000 # If you don't provide any port the port will be set to 12345
 
 
     #load the model
@@ -60,7 +58,7 @@ if __name__ == '__main__':
     
 
     
-    app.run(port=port, debug=False)
+    app.run(host='0.0.0.0',port=port, debug=False)
 
 
  
